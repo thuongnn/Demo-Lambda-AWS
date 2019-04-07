@@ -1,0 +1,8 @@
+{
+	"auth": {
+		"myapp": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}

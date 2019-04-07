@@ -1,0 +1,22 @@
+{
+    "myapp": {
+        "awscloudformation": {
+            "AuthRoleName": "myapp2-20190303215915-authRole",
+            "UnauthRoleArn": "arn:aws:iam::594566683811:role/myapp2-20190303215915-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::594566683811:role/myapp2-20190303215915-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "myapp2-20190303215915-deployment",
+            "UnauthRoleName": "myapp2-20190303215915-unauthRole",
+            "StackName": "myapp2-20190303215915",
+            "StackId": "arn:aws:cloudformation:us-east-2:594566683811:stack/myapp2-20190303215915/eb290850-3dc4-11e9-9945-02649197f7a0"
+        },
+        "categories": {
+            "auth": {
+                "myapp": {
+                    "facebookAppId": "155841285330063",
+                    "googleClientId": "345185909456-oosi4vr959gt4i3k0q0vmlm2ki242j1f.apps.googleusercontent.com"
+                }
+            }
+        }
+    }
+}

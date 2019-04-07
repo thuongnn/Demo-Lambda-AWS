@@ -1,0 +1,76 @@
+{
+    "identityPoolName": "demo_n_tier",
+    "allowUnauthenticatedIdentities": false,
+    "thirdPartyAuth": true,
+    "lambdaLogPolicy": "myapp_lambda_log_policy",
+    "openIdLambdaRoleName": "myapp_openid_lambda_role",
+    "openIdRolePolicy": "myapp_openid_pass_role_policy",
+    "openIdLambdaIAMPolicy": "myapp_openid_lambda_iam_policy",
+    "openIdLogPolicy": "myapp_openid_lambda_log_policy",
+    "userPoolName": "demo_n_tier",
+    "autoVerifiedAttributes": [
+        "email"
+    ],
+    "mfaConfiguration": "OFF",
+    "mfaTypes": [
+        "SMS Text Message"
+    ],
+    "roleName": "myapp_sns-role",
+    "roleExternalId": "myapp_role_external_id",
+    "policyName": "myapp-sns-policy",
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": false,
+    "passwordPolicyMinLength": 8,
+    "passwordPolicyCharacters": [
+        "Requires Lowercase",
+        "Requires Uppercase",
+        "Requires Numbers",
+        "Requires Symbols"
+    ],
+    "requiredAttributes": [
+        "email"
+    ],
+    "userpoolClientName": "myapp_app_client",
+    "userpoolClientGenerateSecret": true,
+    "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientReadAttributes": [
+        "email"
+    ],
+    "mfaLambdaRole": "myapp_totp_lambda_role",
+    "mfaLambdaLogPolicy": "myapp_totp_lambda_log_policy",
+    "mfaPassRolePolicy": "myapp_totp_pass_role_policy",
+    "mfaLambdaIAMPolicy": "myapp_totp_lambda_iam_policy",
+    "userpoolClientLambdaRole": "myapp_userpoolclient_lambda_role",
+    "userpoolClientLogPolicy": "myapp_userpoolclient_lambda_log_policy",
+    "userpoolClientLambdaPolicy": "myapp_userpoolclient_lambda_iam_policy",
+    "userpoolClientSetAttributes": false,
+    "useDefault": "manual",
+    "authSelections": "identityPoolAndUserPool",
+    "resourceName": "myapp",
+    "authProviders": [
+        "graph.facebook.com",
+        "accounts.google.com"
+    ],
+    "selectedParties": "{\"graph.facebook.com\":\"155841285330063\",\"accounts.google.com\":\"345185909456-oosi4vr959gt4i3k0q0vmlm2ki242j1f.apps.googleusercontent.com\"}",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    },
+    "unauthRoleArn": {
+        "Fn::GetAtt": [
+            "UnauthRole",
+            "Arn"
+        ]
+    }
+}

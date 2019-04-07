@@ -1,0 +1,33 @@
+- http:
+    method: get
+    path: /book
+- http:
+    method: post
+    path: /book
+    authorizer:
+      arn: ${self:provider.environment.USER_POOL_ARN}
+- http:
+    method: get
+    path: /book/{bookId}
+    request:
+      parameters:
+        paths:
+          bookId: true
+- http:
+    method: put
+    path: /book/{bookId}
+    authorizer:
+      arn: ${self:provider.environment.USER_POOL_ARN}
+    request:
+      parameters:
+        paths:
+          bookId: true
+- http:
+    method: delete
+    path: /book/{bookId}
+    authorizer:
+      arn: ${self:provider.environment.USER_POOL_ARN}
+    request:
+      parameters:
+        paths:
+          bookId: true

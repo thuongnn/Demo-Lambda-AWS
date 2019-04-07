@@ -1,0 +1,19 @@
+service:
+  name: final-demo-n-tier
+
+plugins:
+  - serverless-webpack # Add the serverless-webpack plugin
+  - serverless-offline # serverless-offline needs to be last in the list
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: us-east-2
+  environment: ${file(env.yml)}
+
+functions:
+  book:
+    handler: src/functions/book/handler.bookHandler
+    description: CRUD Book
+    events: ${file(src/functions/book/events.yml)}
+    memorySize: 512
