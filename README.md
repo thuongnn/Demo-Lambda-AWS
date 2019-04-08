@@ -1,5 +1,7 @@
 # Demo-Lambda-AWS
-Lambda AWS with Serverless Framework + Authentication with cognito
+- Lambda AWS with Serverless Framework + Authentication with cognito.
+- Login authentication with cognitto & amplify.
+- CRUD Book from server with token (after login).
 
 ## Back-end
 - Technicals and technologies have used:
